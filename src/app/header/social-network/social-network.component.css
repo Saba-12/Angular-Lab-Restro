@@ -1,0 +1,48 @@
+.socials{
+    margin-top: 3%;
+}
+
+.socials {
+    margin-bottom: 27px;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+.socials a {
+    position: relative;
+    margin: 0 4px 0 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    font: 24px/43px FontAwesome;
+    box-shadow: 2px 0px #888888;
+}
+
+.socials a:first-child:after {
+    content: '';
+    font: 24px/43px FontAwesome;
+    width: 43px;
+    height: 43px;
+    text-align: center;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.socials a:first-child + a:after {
+    content: '';
+
+}
+
+.socials a:first-child + a + a:after {
+    content: ' ';
+
+}
+
+
+.socials a:hover {
+    box-shadow: none;
+}

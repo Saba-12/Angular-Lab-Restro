@@ -1,0 +1,38 @@
+<header class="row">
+    <div class="col-lg-2">
+        <app-social-network></app-social-network>
+    </div>
+    <div class="col-lg-8 text-align-center">
+        
+    </div>
+    <div class="col-lg-2">
+        <app-user-detail></app-user-detail>
+    </div>
+    <div class="col-lg-2">
+        
+    </div>
+    <div class="col-lg-8 text-align-center">
+        <app-store-title></app-store-title>
+        <div class="menu_block">
+            <nav id="bt-menu" class="bt-menu" [class.bt-menu-open]="showMenu">
+                <a href="javascript:void(0)" (click)="openMenu()" class="bt-menu-trigger"><span>Menu</span></a>
+                <ul>
+                    <li routerLinkActive="current" class="bt-icon"><a [routerLink]="['restaurants']">Food</a></li>
+                    <li routerLinkActive="current" class="bt-icon"><a [routerLink]="['blog']">Blog</a></li>
+                    <li routerLinkActive="current" class="bt-icon"><a [routerLink]="['about']">About</a></li>
+                    <li routerLinkActive="current" class="bt-icon"><a [routerLink]="['reservation']">Reservation</a></li>
+                    <li routerLinkActive="current" class="bt-icon"><a [routerLink]="['contact']">Contacts</a></li>
+                    <li routerLinkActive="current" class="bt-icon"><a [routerLink]="['orders']">Orders</a></li>
+                </ul>
+                
+            </nav>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="col-lg-2">
+        
+    </div>
+    
+</header>
+

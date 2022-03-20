@@ -1,0 +1,96 @@
+.toolbar {
+    background-color: #beb24b;
+  }
+
+  .toolbar img {
+    margin-left: 35%;
+  }
+
+  h1{
+    color:#fdb913;
+}
+
+.content{
+    padding: 1%;
+    box-shadow: 2px -2px 10px #888;
+    min-height: 16.6em;
+}
+
+
+.col-left {
+  text-align: left !important;
+}
+
+.col-right {
+  text-align: right !important;
+}
+
+.disabled {
+  color: #fff;
+  background-color: #aebbca !important;
+  border-color: #55677d !important;
+}
+
+.order-summary {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.login > p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.title-login {
+  font-size: 35px !important;
+  text-align: center;
+  margin-top: 66px;
+}
+
+.sub-title-login {
+  font-size: 19px !important;
+  text-align: center;
+  margin-top: 29px;
+}
+
+.padding-left-zero{
+  padding-left: 0px!important;
+}
+
+.padding-right-zero{
+  padding-right: 0px!important;
+}
+
+.padding-top-zero{
+  padding-top: 0px!important;
+}
+
+.padding-bottom-zero{
+  padding-bottom: 0px!important;
+}
+
+.padding-left-right-zero{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+
+.padding-top-bottom-zero{
+  padding-top: 0px!important;
+  padding-bottom: 0px!important;
+}
+
+.text-align-center{
+  text-align: center!important;
+}
+
+.margin-zero{
+  margin: 0px!important;
+}
+
+.margin-bottom-zero{
+  margin-bottom: 0px!important;
+}
+
+.margin-top-zero{
+  margin-top: 0px!important;
+}

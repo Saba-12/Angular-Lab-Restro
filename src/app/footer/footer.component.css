@@ -1,0 +1,27 @@
+footer {
+    display: block;
+    color: #85846d;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    background-color: #b8b364;
+}
+
+footer a:hover {
+    color: #5f5e4e;
+}
+
+.f_logo {
+    display: inline-block;
+}
+
+.logo-width {
+    max-width: 15vw;
+ }
+
+.copy {
+    padding-top: 31px;
+    margin: 0 7px;
+    border-top: 1px solid #5f5e4e;
+}
+
