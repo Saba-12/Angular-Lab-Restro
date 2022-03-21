@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-employee-count',
@@ -14,10 +14,13 @@ export class EmployeeCountComponent implements OnInit {
   
 // Lab 13: Input Property
 
+  @Input()
   total: number;
 
+  @Input()
   male: number;
 
+  @Input()
   female: number;
 
 }
