@@ -29,6 +29,13 @@ export class EmployeeComponent implements OnInit {
 
 
   // Lab 4: Interpolation - Person data
+  Name:string="Seher";
+  Gender:string="F";
+  DOB:string=new Date(1999,7,27).toLocaleDateString();
+  Area:string="South Banglore";
+  IsAvailable:boolean=true;
+
+
 
 
 
@@ -36,11 +43,13 @@ export class EmployeeComponent implements OnInit {
 
 
   // Lab 5: Property Binding - ImgSrc
-
+  ImgSrcF="../../assets/images/female.png"
+  ImgSrcM="../../assets/images/male.png"
 
 
   // Lab 6: Class Binding - KeyStyle
-
+  KeyStyle:string="text-center bold"
+  IsItalic:boolean=true
   
 
   // Lab 9: Two-way Binding - searchText
