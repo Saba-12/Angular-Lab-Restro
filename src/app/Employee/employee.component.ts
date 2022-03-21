@@ -33,14 +33,15 @@ export class EmployeeComponent implements OnInit {
   Gender:string="F";
   DOB:string=new Date(1999,7,27).toLocaleDateString();
   Area:string="South Banglore";
-  IsAvailable:boolean=true;
+  IsAvailable:boolean=false;
 
 
 
 
 
   // Lab 7: StyleBinding - isAvailable
-
+  IsItalic:boolean=true
+  
 
   // Lab 5: Property Binding - ImgSrc
   ImgSrcF="../../assets/images/female.png"
@@ -49,7 +50,7 @@ export class EmployeeComponent implements OnInit {
 
   // Lab 6: Class Binding - KeyStyle
   KeyStyle:string="text-center bold"
-  IsItalic:boolean=true
+
   
 
   // Lab 9: Two-way Binding - searchText

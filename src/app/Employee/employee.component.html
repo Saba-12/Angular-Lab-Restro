@@ -45,7 +45,7 @@
             </div>
         </div>
         <hr>
-        <div class="text-center">{{IsAvailable ? "Available":"Not Available"}}</div>
+        <div class="text-center" [style.color]="IsAvailable?'green':'red'">{{IsAvailable ? "Available":"Not Available"}}</div>
     </div>
     </div>
 </div>
