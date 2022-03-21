@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Employee } from '../../shared/models/Employee'
 import { EmployeeService } from '../../core/services/EmployeeService';
 import { error } from '@angular/compiler/src/util';
@@ -41,7 +41,7 @@ export class EmployeeComponent implements OnInit {
 
   // Lab 7: StyleBinding - isAvailable
   IsItalic:boolean=true
-  
+
 
   // Lab 5: Property Binding - ImgSrc
   ImgSrcF="../../assets/images/female.png"
@@ -54,10 +54,22 @@ export class EmployeeComponent implements OnInit {
   
 
   // Lab 9: Two-way Binding - searchText
+  searchText:string="";
 
 
   // Lab 8: Event Binding - box-shadow
+    mouseOver($event){
+        $event.srcElement.classList.add("box-shadow");
+    }
 
+    mouseOut($event){
+        $event.srcElement.classList.remove("box-shadow");
+    }
+
+    @HostListener('dblclick')
+    OnDblClick(){
+      alert("Double click event is listened by the DOM");
+    }
   
 
 

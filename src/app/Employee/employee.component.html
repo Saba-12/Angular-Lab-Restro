@@ -3,9 +3,13 @@
       <h1>Delivery Service Employees</h1>
     </div>
     <div class="col-lg-3">
-      <input type="text" class="float-right" placeholder="search">
+      <!-- <input type="text" class="float-right" placeholder="search" [value]="searchText" (input)="searchText=$event.target.value"> -->
 
       <!-- Lab 9: Two-way Binding - search Text -->
+      <input type="text" class="float-right" placeholder="search" [(ngModel)]="searchText">
+      <br>
+      <br>
+      <span>You Searched :{{searchText}}</span>
 
     </div>
     <div class="col-lg-1">
@@ -19,10 +23,10 @@
 
 <div class="row">
 <div class="col-lg-3"> <!-- Lab 10: *ngFor - data loop -->
-    <div class="card">
+    <div class="card" (mouseenter)="mouseOver($event)" (mouseleave)="mouseOut($event)">
     <img [src]="Gender == 'F'?ImgSrcF:ImgSrcM" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{Name}}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
+      <h5 class="card-title">{{Name | uppercase}}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
       <div class="card-text">
         <div class="row">
             <div class="col-lg-6">
@@ -35,7 +39,7 @@
                 <span [class]="KeyStyle">DOB</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">{{DOB}}</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
+                <span class="text-center" *ngIf="DOB else notAvailable">{{DOB | date:"dd/MM/yyyy"}}</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
             </div>
             <div class="col-lg-6">
                 <span [class]="KeyStyle">Op Area</span>
@@ -44,6 +48,9 @@
                 <span class="text-center">{{Area}}</span>
             </div>
         </div>
+        <ng-template #notAvailable>
+          <span class="text-center">N/A</span>
+        </ng-template>
         <hr>
         <div class="text-center" [style.color]="IsAvailable?'green':'red'">{{IsAvailable ? "Available":"Not Available"}}</div>
     </div>

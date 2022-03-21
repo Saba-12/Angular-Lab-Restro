@@ -22,6 +22,9 @@
 }
 
 /* Lab 8: box-shadow */
+.box-shadow{
+    box-shadow: 1px 5px 5px 0 grey;
+}
 
 h1{
     color:#fdb913;
