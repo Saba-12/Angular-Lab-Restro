@@ -25,7 +25,7 @@
 
 <div class="row">
 <div class="col-lg-3" *ngFor="let e of employees; trackBy:trackByEmpID;"> <!-- Lab 10: *ngFor - data loop -->
-  <div class="card" (mouseenter)="mouseOver($event)" (mouseleave)="mouseOut($event)">
+  <div class="card" (mouseenter)="mouseOver($event)" (mouseleave)="mouseOut($event)" routerLink="/profile" [queryParams]= "{id:e.EmployeeId}">
   <img [src]="e.Gender == 'F'?ImgSrcF:ImgSrcM" class="card-img-top" alt="..." [appHighlight]>
     <div class="card-body">
       <h5 class="card-title">{{e.Name | employeeTitle:e.Gender | uppercase}}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->

@@ -15,6 +15,7 @@ import { SocialNetworkComponent } from './header/social-network/social-network.c
 import { StoreTitleComponent } from './header/store-title/store-title.component';
 import { UserDetailComponent } from './header/user-detail/user-detail.component';
 import { HighlightDirective } from 'src/shared/directives/highlight.directive';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HighlightDirective } from 'src/shared/directives/highlight.directive';
     SocialNetworkComponent,
     StoreTitleComponent,
     UserDetailComponent,
-    HighlightDirective
+    HighlightDirective,
+    EmployeeProfileComponent
   ],
   imports: [
     BrowserModule,

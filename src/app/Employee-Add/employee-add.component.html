@@ -6,27 +6,31 @@
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
         <!-- Lab 17: Forms and Controls -->
-        <form>
+        <form #empForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" [(ngModel)]="model.Name" #Name="ngModel" name="Name" required>
+                <div [hidden]="Name.valid || Name.pristine" class="alert alert-danger">Name is Required</div>
             </div>
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select class="form-control" id="gender">
+                <select class="form-control" id="gender" [(ngModel)]="model.Gender" #Gender="ngModel" name="Gender" required>
                     <option value="M">Male</option>
                     <option value="F">Female</option>
                 </select>
+                <div [hidden]="Gender.valid || Gender.pristine" class="alert alert-danger">Gender is Required</div>
             </div>
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
-                <input type="date" class="form-control" id="dob">
+                <input type="date" class="form-control" id="dob" [(ngModel)]="model.DOB" #DOB="ngModel" name="DOB" required>
             </div>
+            <div [hidden]="DOB.valid || DOB.pristine" class="alert alert-danger">DOB is Required</div>
             <div class="form-group">
                 <label for="area">Area of Operation</label>
-                <input type="text" class="form-control" id="area">
+                <input type="text" class="form-control" id="area" [(ngModel)]="model.Area" #Area="ngModel" name="Area" required>
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <div [hidden]="Area.valid || Area.pristine" class="alert alert-danger">Area is Required</div>
+            <button type="submit" class="btn btn-success" [disabled]="!empForm.form.valid">Submit</button>
         </form>
 
     </div>

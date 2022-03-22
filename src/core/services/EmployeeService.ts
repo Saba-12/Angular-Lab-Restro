@@ -46,4 +46,8 @@ export class EmployeeService {
   }
 
   // Lab 17: Forms - http.post
+
+  addEmployee(obj:Employee):Observable<Employee>{
+      return this._http.post<Employee>(this.url,obj)
+  }
 }

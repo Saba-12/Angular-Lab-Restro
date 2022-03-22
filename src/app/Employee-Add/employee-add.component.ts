@@ -22,4 +22,12 @@ export class EmployeeAddComponent implements OnInit {
   }
 
   // Lab 17: Forms and Controls - onSubmit
+  onSubmit(){
+    this.model.IsAvailable=true;
+
+    this._empService.addEmployee(this.model)
+    .subscribe(employee => this.model = employee)
+
+    this.router.navigate(['']);
+  }
 }

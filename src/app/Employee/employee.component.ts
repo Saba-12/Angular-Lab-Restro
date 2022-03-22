@@ -8,6 +8,7 @@ import { EmployeeCountComponent } from '../employee-count/employee-count.compone
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
+  // template:'<h1>Hello</h1>',
   styleUrls: ['./employee.component.css'],
   providers: [EmployeeService]
 })
@@ -54,7 +55,7 @@ export class EmployeeComponent implements OnInit {
 
 
   // Lab 7: StyleBinding - isAvailable
-  IsItalic:boolean=true
+  IsAvailable:boolean=true
 
 
   // Lab 5: Property Binding - ImgSrc
