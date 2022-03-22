@@ -21,17 +21,17 @@ export class EmployeeComponent implements OnInit {
   // ];
   employees:Employee[]=[];
   constructor(private _employeeService: EmployeeService) { 
-    this.employees=this._employeeService.getEmployees();
+    
     
   }
 
   ngOnInit(): void {
-    
+    //this.employees=this._employeeService.getEmployees();
 
     // Lab 15: HTTP Service - RxJs
+    this._employeeService.getEmpData()
+    .subscribe(employees => this.employees=employees); //service observer
 
-    
-    
   }
 //  @ViewChild(EmployeeCountComponent)
 //  childComponent:EmployeeCountComponent

@@ -5,6 +5,8 @@ import { EmployeeAddComponent } from './employee-add/employee-add.component';
 
 const routes: Routes = [
   // Lab 16: Routing - Form Page
+  {path:'',component:EmployeeComponent},
+  {path:'add',component:EmployeeAddComponent}
 ];
 
 @NgModule({
